@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.abdulmateen.arcoredemo">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Limits app visibility in the Google Play Store to ARCore supported devices
+         (https://developers.google.com/ar/discover/supported-devices). -->
+    <uses-feature android:name="android.hardware.camera.ar" />
+
+    <uses-feature android:name="com.google.ar.core.depth" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ARCoreDemo">
+
+        <meta-data android:name="com.google.ar.core" android:value="required" />
+
+        <activity android:name=".activities.MainActivity" >
+
+
+        </activity>
+
+        <activity android:name=".activities.HelloArActivity" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+
+    </application>
+
+</manifest>
